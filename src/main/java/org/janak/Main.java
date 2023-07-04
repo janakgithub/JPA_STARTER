@@ -21,8 +21,10 @@ public class Main {
         Employee employee = entityManager.find(Employee.class, 2);
         System.out.println(employee);
 
-        employee.setName("Nikita  Adhikari");
-        entityManager.persist(employee);
+//        employee.setName("Nikita  Adhikari");
+//        entityManager.persist(employee);
+
+        entityManager.remove(employee);
 
         transaction.commit();
         entityManager.close();
