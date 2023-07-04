@@ -11,20 +11,21 @@ public class Main {
         Employee emp = new Employee();
 
         emp.setName("Janak Adhikari");
+        emp.setType(EmployeeType.FULL_TIME);
 
         EntityManagerFactory entityManagerFactory =  Persistence.createEntityManagerFactory("myApp");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
         transaction.begin();
-        //entityManager.persist(emp);
+        entityManager.persist(emp);
 
-        Employee employee = entityManager.find(Employee.class, 2);
-        System.out.println(employee);
+ //       Employee employee = entityManager.find(Employee.class, 2);
+ //       System.out.println(employee);
 
 //        employee.setName("Nikita  Adhikari");
 //        entityManager.persist(employee);
 
-        entityManager.remove(employee);
+//        entityManager.remove(employee);
 
         transaction.commit();
         entityManager.close();
