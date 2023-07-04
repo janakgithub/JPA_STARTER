@@ -6,7 +6,7 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import java.util.Date;
 
-public class Main {
+public class WriteJPADataMain {
     public static void main(String[] args) {
 
         Employee emp = new Employee();

@@ -16,6 +16,14 @@ public class AccessCard {
     private Boolean isActive;
     private String firmware;
 
+    public Boolean getActive() {
+        return isActive;
+    }
+
+    public void setActive(Boolean active) {
+        isActive = active;
+    }
+
     public int getId() {
         return id;
     }
@@ -46,5 +54,15 @@ public class AccessCard {
 
     public void setFirmware(String firmware) {
         this.firmware = firmware;
+    }
+
+    @Override
+    public String toString() {
+        return "AccessCard{" +
+                "id=" + id +
+                ", issueDate=" + issueDate +
+                ", isActive=" + isActive +
+                ", firmware='" + firmware + '\'' +
+                '}';
     }
 }

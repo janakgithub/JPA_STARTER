@@ -93,6 +93,7 @@ public class Employee {
                 ", dob=" + dob +
                 ", ssn='" + ssn + '\'' +
                 ", type=" + type +
+                ", card=" + card +
                 '}';
     }
 }
