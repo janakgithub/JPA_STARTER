@@ -27,11 +27,13 @@ public class Main {
         aCard.setIssueDate(new Date());
         aCard.setActive(true);
         aCard.setFirmware("1.0.0");
+        emp.setCard(aCard);
 
         AccessCard aCard2 = new AccessCard();
         aCard2.setIssueDate(new Date());
         aCard2.setActive(false);
         aCard2.setFirmware("1.1.0");
+        emp2.setCard(aCard2);
 
         EntityManagerFactory entityManagerFactory =  Persistence.createEntityManagerFactory("myApp");
         EntityManager entityManager = entityManagerFactory.createEntityManager();

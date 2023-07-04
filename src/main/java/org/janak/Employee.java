@@ -8,7 +8,7 @@ import java.util.Date;
 public class Employee {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String name;
 
@@ -25,6 +25,17 @@ public class Employee {
    //@Enumerated(EnumType.ORDINAL)
     @Enumerated(EnumType.STRING)
     private EmployeeType type;
+
+    @OneToOne
+    private AccessCard card;
+
+    public AccessCard getCard() {
+        return card;
+    }
+
+    public void setCard(AccessCard card) {
+        this.card = card;
+    }
 
     public Date getDob() {
         return dob;
