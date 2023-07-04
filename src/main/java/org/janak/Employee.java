@@ -1,6 +1,7 @@
 package org.janak;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -9,11 +10,21 @@ import javax.persistence.Table;
 public class Employee {
 
     @Id
+    @GeneratedValue
     private int id;
+
     private String name;
 
     public int getId() {
         return id;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
     }
 
     public void setId(int id) {
